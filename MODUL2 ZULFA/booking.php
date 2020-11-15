@@ -30,7 +30,7 @@
 
 <div class="row justify-content-center">
     <div class="col-4">
-      <from action="mybooking.php" method="get">
+      <form action="mybooking.php" method="post">
   <div class="form-group">
     <label for="nama">Name</label>
     <input type="text" class="form-control" id="nama" name="nama">
@@ -52,7 +52,7 @@
  				<div class="form-group">
                             <label for="tipe">Room Type</label>
                             <?php
-                                if(!empty($_POST['type'])){
+                                if(empty($_GET['type'])){
                             ?>
                                 <div class="form-group">
                                 <select class="custom-select mr-sm-2" name="tipekamar" value="tipekamar" id="tipekamar1">
@@ -64,7 +64,7 @@
                                 </div>
                             <?php } else { ?>
                                 <div>
-                                    <input type="text" value="<?php echo $_POST['type'] ?>" readonly name="tipekamar" value="tipekamar">
+                                    <input type="text" value="<?php echo $_GET['type'] ?>" readonly name="tipekamar" value="tipekamar">
                                 </div> 
                             <?php } ?>  
                             

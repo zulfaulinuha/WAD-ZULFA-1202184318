@@ -32,7 +32,7 @@
         $check_out = date("d/m/Y",strtotime("+".$durasi." days", strtotime($datepicker)));
         $tipekamar = $_POST['tipekamar'];
         $tlp = $_POST['tlp'];
-        $service = $_POST['service'];
+        
         $booking_id = rand(1,1000000);
         $booking_date = date("d/m/Y");
         $price;
@@ -71,12 +71,12 @@
                     <td><?= $tlp ?></td>
                     <td>
                       
-                            <?php if(!empty($_POST['service'])){
-
+                            <?php if(isset($_POST['service'])){
+                                $service = $_POST['service'];
                                 foreach($_POST['service'] as $service){
                                 echo $service;
                             }
-                        }else if(empty($_POST['service'])){
+                        }else if(!isset($_POST['service'])){
                         echo 'no service';}?>
                            
                     
