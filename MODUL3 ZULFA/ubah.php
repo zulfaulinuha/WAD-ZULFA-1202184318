@@ -1,6 +1,5 @@
 <?php
 	if (isset($_POST['simpan'])) {
-		include "koneksi.php";
 		$id = $_POST['id'];
 		$name = $_POST['name'];
 		$deskripsi = $_POST['deskripsi'];
