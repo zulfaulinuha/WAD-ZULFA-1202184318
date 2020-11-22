@@ -17,8 +17,9 @@
 		</div>
 		<div class="column2">
 			<?php 
+				include "koneksi.php";
 				$sql = "SELECT * FROM events";
-				$result = $conn->querys($sql);
+				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
 				  while($row = $result->fetch_assoc()) {?>

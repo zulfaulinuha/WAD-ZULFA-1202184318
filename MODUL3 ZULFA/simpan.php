@@ -1,5 +1,6 @@
 <?php
 	if (isset($_POST['simpan'])) {
+		include "koneksi.php";
 		$name = $_POST['name'];
 		$deskripsi = $_POST['deskripsi'];
 		$kategori = $_POST['kategori'];
@@ -14,7 +15,7 @@
 			$for_query .= $benefit . ', ';
         }
 
-        $for_query = substrs($for_query, 0, -2);
+        $for_query = substr($for_query, 0, -2);
 
 		$rand = rand();
 		$ekstensi =  array('png','jpg','JPG','jpeg');
