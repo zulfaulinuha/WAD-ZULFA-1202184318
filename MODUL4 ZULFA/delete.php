@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_destroy();
 include "koneksi.php";
     $id = $_GET['id'];
     $query = mysqli_query($connect,"DELETE FROM cart_table WHERE id='$id'");
