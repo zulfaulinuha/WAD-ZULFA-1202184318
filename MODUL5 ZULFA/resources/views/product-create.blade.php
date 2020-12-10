@@ -21,8 +21,8 @@
                 </ul>
             </div>
         @endif
-        <form method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
-            @csrf 
+        <form method="post" action="{{ ('product.store') }}" enctype="multipart/form-data">
+          
             <div class="form-group">
                 <label for="nama">Product Name</label>
                 <input type="text" class="form-control" id="nama" name="name">

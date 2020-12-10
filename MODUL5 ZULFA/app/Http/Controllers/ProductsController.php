@@ -24,7 +24,7 @@ class ProductsController extends Controller
         $products = \App\Models\Product::all(); 
 
         // arahkan ke halaman product.blade.php dengan mengirimkan data $product
-        return view('product', ['products' => $products]);
+        return view('products', ['products' => $products]);
     }
 
     /**
